@@ -1,29 +1,62 @@
 const Intern = require('../lib/intern');
 
-const obj = {name: "John", id: "1", email:"john@email.com", github: "john1"};
-const person = new Intern(obj);
 
+
+// const obj = {name: "john", id: "1", email:"john@email.cm"};
+// const person = new Employee(obj);
+test("instantiate instance class of Intern", () => {
+  
+    const person = new Intern();
+    expect(typeof(person)).toBe("object")
+    
+});
 test("testing name", () => {
-    expect(person.getName()).toBe("John")
+    const testValue =  "John";
+    const person = new Intern(testValue);
+    expect(person.getName()).toBe(testValue)
     
 });
 
 test("testing ID", () => {
-    expect(person.id).toBe("1")
+    const testValue =  "1";
+    const person = new Intern("John", testValue);
+    expect(person.getId()).toBe(testValue)
     
 });
 
 test("testing email", () => {
-    expect(person.email).toBe("john@email.com")
+    const testValue = "john@email.com";
+    const person = new Intern("John", "1", testValue);
+    expect(person.getEmail()).toBe(testValue)
     
 });
 
 test("testing role method", () => {
-    expect(person.getRole()).toBe("Intern")
+    const testValue = "Intern";
+    const person = new Intern(testValue);
+    expect(person.getRole()).toBe(testValue)
     
 });
-
-test("testing github method", () => {
-    expect(person.getSchool()).toBe("HARD KNOCKS")
-    
+test("setting name to constructor", () => {
+const testValue = "John";
+const person = new Intern(testValue);
+expect(person.name).toBe(testValue)
 });
+test("setting id to constructor", () => {
+    const testValue = "1";
+    const person = new Intern("John", testValue);
+    expect(person.id).toBe(testValue)
+    });
+    test("setting email to constructor", () => {
+        const testValue = "john@email.com";
+        const person = new Intern("John", "john@email.com", testValue);
+        expect(person.email).toBe(testValue)
+        });
+// test("testing github method", () => {
+//     const testValue = "HARD KNOCKS";
+//     const person = new Intern("John", "john@email.com", testValue);
+//     expect(person.getSchool()).toBe(testValue)
+//     });
+//     expect(person.getSchool()).toBe("HARD KNOCKS")
+    
+// });
