@@ -15,7 +15,7 @@ To use this application
 ## Usage
 
 Application is invoked using node index.js from the intergrated terminal.  Walkthrough video link: 
-[Walkthrough Video]
+[Walkthrough Video]https://watch.screencastify.com/v/f2FxYrRxLwlKCUvnUlUe
 
 
 ![Team Profile]
